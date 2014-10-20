@@ -1,0 +1,15 @@
+likes('Ellen', tennis).%Ellen likes tennis.
+likes('John', football).%John likes football.
+likes('Tom', baseball).%Tom likes baseball.
+likes('Tom', swimming).%Tom likes swimming.
+likes('Mark', tennis).%Mark likes tennis.
+likes('Bill', X):-likes('Tom', X). % Bill likes what Tom likes.
+likes('Ellen', reading).%Эллен likes reading.
+likes('Mark', computers).%Марк likes computers.
+likes('John', badminton).%Джон likes badminton.
+likes('Tom', reading).%Эрик likes reading.
+typeOfSport('badminton').%badminton - это вид спорта.
+typeOfSport('tennis').%tennis - это вид спорта.
+typeOfSport('football').%football - это вид спорта.
+typeOfSport('бейсбол').%Бейсбол - это вид спорта.
+sportsmen(X):-typeOfSport(S),likes(X, S).% sportsmen - это тот, кто likes какой-нибудь вид спорта.

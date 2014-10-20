@@ -1,0 +1,8 @@
+maxmin(X,[X],_):-!.
+maxmin(H,[H|Tail],Z):-maxmin(Extr,Tail,Z),Z*H>Z*Extr,!.
+maxmin(Extr,[_|Tail],Z):-maxmin(Extr,Tail,Z).
+
+main(L):-L=[],write('Пустой список!'),nl,!.
+main(L):-L=[Max], write('Max=Min='),write(Max),nl,!.
+
+main(L,X,Y):-maxmin(Max,L,1),maxmin(Min,L,-1),write('Max='),write(Max),nl,write('Min='),write(Min),nl,!.

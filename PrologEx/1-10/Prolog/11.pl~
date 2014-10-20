@@ -1,0 +1,20 @@
+like('Ellen', tennis).
+like('John', football).
+like('Tom', baseball).
+like('Erik', swimming).
+like('Mark', tennis).
+like('Bill', X):-like('Tom', X).
+
+sport(football).
+sport(tennis).
+sport(baseball).
+like('Ellen', reading).
+like('Mark', computers).
+like('John', badminton).
+like('Erik', reading).
+sporty(X):-like(X, Y), sport(Y).
+nsp(X):-like(X, Y), not(sport(Y)).
+fan(X):-sporty(X), not(nsp(X)).
+
+
+
